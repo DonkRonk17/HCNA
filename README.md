@@ -417,7 +417,7 @@ This repository contains the **architectural documentation** for HCNA-3 (open so
 
 **Website**: [MetaphysicsandComputing.com](https://metaphysicsandcomputing.com)
 **Email**: logan@metaphysicsandcomputing.com
-**GitHub**: [Metaphy LLC Organization](https://github.com/metaphyllc) *(coming soon)*
+**GitHub**: [Metaphy LLC Organization](https://github.com/donkronk17)
 
 **Interested in collaborating?** Metaphy LLC welcomes:
 - Research partnerships on distributed computing and geometric algorithms
@@ -427,7 +427,7 @@ This repository contains the **architectural documentation** for HCNA-3 (open so
 
 ---
 
-**Together, we build the computational substrate for a Type III civilization.** 🚀
+**Together, we build the computational substrate for universal computing and solutions.** 🚀
 
 *HCNA-3 → HMSS → QUAD — From two laptops to planetary networks.*
 
