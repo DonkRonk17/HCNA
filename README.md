@@ -159,7 +159,7 @@ HCNA-3 is the **hardware foundation** for the [Metaphy LLC](https://metaphysicsa
 - **Use Case**: Ensure intent messages, telemetry, and results cannot be intercepted or tampered with
 - **Implementation Status**: ✅ Working - Production implementation with API functions deployed
 
-#### 🔷 **BCH (Beacon Command Hub)**
+#### 🔷 **BCH (Beacon Comms Hub)**
 - **Integration Point**: BCH is a **reference implementation** of the C1 composite pattern — unified WebSocket API federating multiple AI agents
 - **Use Case**: Demonstrates how C1 can expose a coherent interface while coordinating specialized subsystems (agents as "nodes")
 - **Implementation Status**: ✅ Production - Desktop and mobile apps operational
@@ -169,17 +169,17 @@ HCNA-3 is the **hardware foundation** for the [Metaphy LLC](https://metaphysicsa
 - **Use Case**: Achieve sub-microsecond intent propagation latency for real-time control loops
 - **Implementation Status**: 🔬 Research Phase
 
-#### 🔷 **SPTS (Simplified Ternary Coding System)** *(Future)*
+#### 🔷 **SPTS (Single Prime Trinary System)** *(Future)*
 - **Integration Point**: Encode control plane messages (intents, policies) using 0/1/2 ternary logic for reduced bandwidth
 - **Use Case**: Minimize control message overhead, enable compact intent representation
 - **Implementation Status**: 🔬 Theoretical - Design phase
 
-#### 🔷 **HMSS (Hierarchical Multi-System Supervisor)** *(Future)*
+#### 🔷 **HMSS (Heavenly Morning Star System)** *(Future)*
 - **Integration Point**: HMSS is **HCNA-3 at scale** — orchestrate 10s or 100s of M+W pairs into planetary networks
 - **Use Case**: Build the physical infrastructure for distributed Type III civilization computing
 - **Implementation Status**: 📋 Planned - HCNA-3 is the foundational building block
 
-#### 🔷 **QUAD (Quantum Universal Adaptive Dynamics)** *(Vision)*
+#### 🔷 **QUAD (Quantum Universal Arrayed Domain)** *(Vision)*
 - **Integration Point**: QUAD is the **end vision** — planetary-scale networks of HMSS clusters running QEGG→DRGFC→LWIS workloads
 - **Use Case**: Global-scale geometric computation, fractal data processing, and AI orchestration
 - **Implementation Status**: 🎯 Vision - 100-year roadmap (2025→2125)
