@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/metaphy-logo.png" alt="Metaphy LLC" width="400">
+<img src="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Metaphy%20LLC%20Logo%20No%20BG%204k%20(2).png/:/rs=w:2560,h:698" alt="Metaphy LLC" width="400">
 
 # HCNA — Hierarchical Composite Node Architecture 🚀
 
-<img src="assets/metaphy-banner.png" alt="Building Type III Civilization Computing" width="100%">
+<img src="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Universal%20Computing%20(2).png/:/rs=w:1280,h:853" alt="Building Type III Civilization Computing" width="100%">
 
 </div>
 

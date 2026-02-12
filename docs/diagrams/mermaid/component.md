@@ -6,18 +6,15 @@ flowchart LR
   end
 
   subgraph Composite_Plane
-    C1[Composite Node (C1)
-VIP/DNS/API]
+    C1["Composite Node (C1)<br/>VIP/DNS/API"]
   end
 
   subgraph Control_Plane
-    M1[Moderator (M1)
-Policy • Scheduling • Health]
+    M1["Moderator (M1)<br/>Policy • Scheduling • Health"]
   end
 
   subgraph Data_Plane
-    W1[Worker (W1)
-Execution • Resources]
+    W1["Worker (W1)<br/>Execution • Resources"]
   end
 
   U --> C1
