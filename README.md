@@ -1,12 +1,17 @@
 <div align="center">
-
-<img src="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Metaphy%20LLC%20Logo%20No%20BG%204k%20(2).png/:/rs=w:2560,h:698" alt="Metaphy LLC" width="400">
+  <video src="https://github.com/user-attachments/assets/154c63c0-3c0c-4f41-8e34-2e423db6ddc7" 
+    poster="https://github.com/user-attachments/assets/6e0d44d7-29c8-4c9c-b382-62a6b432098b"
+    muted="muted" 
+    autoplay="autoplay" 
+    loop="loop" 
+    playsinline 
+    controlslist="nodownload"
+    style="width: 100%; height: auto; border-radius: 10px; display: block;">
+    <img src="https://github.com/user-attachments/assets/6e0d44d7-29c8-4c9c-b382-62a6b432098b" style="width: 100%; border-radius: 10px;">
+  </video>
+</div>
 
 # HCNA — Hierarchical Composite Node Architecture 🚀
-
-<img src="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Universal%20Computing%20(2).png/:/rs=w:1280,h:853" alt="Building Type III Civilization Computing" width="100%">
-
-</div>
 
 **HCNA** is a revolutionary distributed computing architecture where specialized physical computers federate hierarchically to instantiate emergent composite systems. Think of it as **the physical embodiment of a multi-agent AI system** — one node per specialized role, working together to create something greater than the sum of its parts.
 
@@ -400,6 +405,12 @@ This repository contains the **architectural documentation** for HCNA-3 (open so
 **Integration code** for proprietary Metaphy LLC technologies (QEGG, DRGFC, BPCS, LWIS) is available under separate commercial licensing. Contact: [logan@metaphysicsandcomputing.com](mailto:logan@metaphysicsandcomputing.com)
 
 ---
+
+<div align="center">
+
+<img src="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Metaphy%20LLC%20Logo%20No%20BG%204k%20(2).png/:/rs=w:2560,h:698" alt="Metaphy LLC" width="400">
+
+</div>
 
 ## 🙌 Acknowledgments
 
