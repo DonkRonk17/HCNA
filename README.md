@@ -17,7 +17,7 @@
 
 This repository documents the complete HCNA architecture, naming conventions, and implementation patterns for building compositional computing systems that bridge theoretical models with real hardware deployments.
 
-**Created by [Randell Logan Smith](https://metaphysicsandcomputing.com)** | **[Metaphy LLC](https://metaphysicsandcomputing.com)** | **MIT Licensed**
+**Created by [Randell Logan Smith](https://metaphysicsandcomputing.com)** | **[Metaphy LLC](https://metaphysicsandcomputing.com)** | **[HCNA](https://donkronk17.github.io/HCNA/)** | **MIT Licensed**
 
 ---
 
