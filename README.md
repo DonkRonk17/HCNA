@@ -264,19 +264,28 @@ Clients --> [C1 API]
 ### Mermaid — Component View
 ```mermaid
 flowchart LR
-  U[Clients] --> C1[Composite (C1)]
-  C1 <-. Control Bus .-> M1[Moderator (M1)]
-  M1 -- Intents --> W1[Worker (W1)]
-  W1 -- Results --> C1
+  U[Clients] --> C1
+  C1 -.Control Bus.-> M1
+  M1 -.Control Bus.-> C1
+  M1 -->|Intents| W1
+  W1 -->|Results| C1
+
+  C1[Composite - C1]
+  M1[Moderator - M1]
+  W1[Worker - W1]
+
+  style C1 fill:#6A1B9A,color:#fff
+  style M1 fill:#1565C0,color:#fff
+  style W1 fill:#2E7D32,color:#fff
 ```
 
 ### Mermaid — Sequence Diagram
 ```mermaid
 sequenceDiagram
   participant Client
-  participant C1 as Composite (C1)
-  participant M1 as Moderator (M1)
-  participant W1 as Worker (W1)
+  participant C1 as Composite C1
+  participant M1 as Moderator M1
+  participant W1 as Worker W1
 
   Client->>C1: POST /jobs
   C1->>M1: emit intent
