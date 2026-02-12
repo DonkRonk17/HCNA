@@ -1,25 +1,20 @@
+# HCNA-3 Component View
+
+This diagram shows the three planes (Composite, Control, and Data) and how they interact.
 
 ```mermaid
-flowchart LR
-  subgraph Clients
-    U[Users/Apps]
-  end
+graph LR
+    U[Users/Apps] --> C1
 
-  subgraph Composite_Plane
-    C1[Composite Node C1]
-  end
+    C1[Composite Node C1<br/>VIP/DNS/API] --> M1
+    C1 --> W1
 
-  subgraph Control_Plane
-    M1[Moderator M1]
-  end
+    M1[Moderator M1<br/>Policy/Scheduling/Health] --> W1
 
-  subgraph Data_Plane
-    W1[Worker W1]
-  end
+    W1[Worker W1<br/>Execution/Resources] --> M1
+    W1 --> C1
 
-  U --> C1
-  C1 <-. Control Bus .-> M1
-  M1 -- Intents/Policy --> W1
-  W1 -- Results/Telemetry --> M1
-  W1 --> C1
+    style C1 fill:#6A1B9A
+    style M1 fill:#1565C0
+    style W1 fill:#2E7D32
 ```
