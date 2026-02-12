@@ -1,0 +1,7 @@
+
+# HCNA-W1 node config (example)
+role: worker
+host: hcna-w1.prod.local
+port: 9443
+mtls: true
+log_level: info

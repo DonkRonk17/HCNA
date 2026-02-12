@@ -1,0 +1,7 @@
+
+# HCNA-M1 node config (example)
+role: moderator
+host: hcna-m1.prod.local
+port: 8443
+mtls: true
+log_level: info

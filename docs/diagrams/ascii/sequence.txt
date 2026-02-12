@@ -1,0 +1,8 @@
+
+Client -> C1 : POST /jobs
+C1 -> M1     : emit(intent: execute.task, job_id)
+M1 -> W1     : dispatch(task)
+W1 -> C1     : update(job: running)
+W1 -> C1     : update(job: completed, artifact_uri)
+C1 -> Client : 200 OK + result metadata
+M1 -> Logs   : orchestration trace

@@ -1,0 +1,4 @@
+
+[M1] --(intent, policy, schedule)--> [W1]
+[M1] <--(health, metrics, result)--- [W1]
+[C1] exposes unified API to clients

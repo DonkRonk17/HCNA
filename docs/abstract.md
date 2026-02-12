@@ -1,0 +1,4 @@
+
+# Abstract
+
+The **Hierarchical Composite Node Architecture — 3‑System Model (HCNA‑3)** is a novel distributed computing pattern in which two autonomous physical computers — a **Moderator Node (M1)** and a **Worker Node (W1)** — federate hierarchically to instantiate a **third, composite system (C1)** that operates as a single logical computer. HCNA‑3 separates concerns across **control**, **data**, and **composite** planes: M1 governs policy, scheduling, and health; W1 performs labor‑intensive execution; and C1 provides a unified client interface via VIP/DNS. The design enables active–active cooperation, graceful degradation, and clear extensibility to additional roles (storage, accelerators, gateways, observers) while preserving the composite abstraction. HCNA‑3 offers a clean, portfolio‑ready foundation for resilient orchestration, demonstrable systems thinking, and scalable compute composition.

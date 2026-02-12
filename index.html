@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HCNA: Hierarchical Composite Node Architecture - 2 Systems, 1 Computer = 3 Entities. Revolutionary distributed computing architecture by Randell Logan Smith / Metaphy LLC.">
+    <meta name="keywords" content="HCNA, HCNA-3, 2S1C, distributed computing, composite architecture, Metaphy LLC, QEGG, DRGFC, quantum computing">
+    <meta name="author" content="Randell Logan Smith, Metaphy LLC">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HCNA — Hierarchical Composite Node Architecture">
+    <meta property="og:description" content="The physical embodiment of multi-agent systems. Building Type III Civilization Computing.">
+    <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Universal%20Computing%20(2).png/:/rs=w:1280,h:853">
+    <meta property="og:url" content="https://metaphysicsandcomputing.com/hcna">
+
+    <title>HCNA — Hierarchical Composite Node Architecture (2S1C Model)</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Metaphy%20LLC%20App%20Icon%20(2).png/:/rs=w:719,h:715">
+    <link rel="shortcut icon" type="image/png" href="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Metaphy%20LLC%20App%20Icon%20(2).png/:/rs=w:719,h:715">
+
+    <style>
+        /* ===========================
+           GLOBAL STYLES & CSS VARIABLES
+           =========================== */
+        :root {
+            /* Dark Theme Colors (Default) */
+            --bg-primary: rgb(22, 22, 22);
+            --bg-secondary: rgb(30, 30, 35);
+            --bg-tertiary: rgb(40, 42, 54);
+            --accent-blue: rgb(50, 54, 109);
+            --accent-purple: rgb(108, 111, 173);
+            --accent-green: rgb(46, 125, 50);
+            --accent-teal: rgb(0, 188, 212);
+            --text-primary: rgb(245, 245, 245);
+            --text-secondary: rgb(180, 180, 185);
+            --text-muted: rgb(130, 130, 140);
+
+            /* Node Colors */
+            --m1-blue: #1565C0;
+            --w1-green: #2E7D32;
+            --c1-purple: #6A1B9A;
+
+            /* Gradients */
+            --gradient-hero: linear-gradient(135deg, rgba(50,54,109,0.9) 0%, rgba(108,111,173,0.8) 50%, rgba(106,27,154,0.9) 100%);
+            --gradient-card: linear-gradient(145deg, rgba(40,42,54,0.95) 0%, rgba(50,54,109,0.85) 100%);
+
+            /* Fonts */
+            --font-header: 'Montserrat', sans-serif;
+            --font-body: 'Source Sans Pro', sans-serif;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 48px;
+
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+            --shadow-glow: 0 0 20px rgba(108,111,173,0.5);
+        }
+
+        /* Light Theme */
+        .light-theme {
+            --bg-primary: rgb(250, 250, 252);
+            --bg-secondary: rgb(240, 242, 248);
+            --bg-tertiary: rgb(230, 235, 245);
+            --accent-blue: rgb(30, 34, 89);
+            --accent-purple: rgb(88, 91, 153);
+            --text-primary: rgb(30, 30, 35);
+            --text-secondary: rgb(60, 60, 70);
+            --text-muted: rgb(100, 100, 115);
+            --gradient-hero: linear-gradient(135deg, rgba(30,34,89,0.9) 0%, rgba(88,91,153,0.8) 50%, rgba(86,27,134,0.9) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* ===========================
+           TYPOGRAPHY
+           =========================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-header);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        h4 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent-purple);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-teal);
+        }
+
+        /* ===========================
+           HEADER & NAVIGATION
+           =========================== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(22, 22, 22, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(108, 111, 173, 0.2);
+            padding: 1rem var(--spacing-md);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .light-theme header {
+            background: rgba(250, 250, 252, 0.95);
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 90px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Center navigation */
+        nav {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: inline-flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-xl);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            background: var(--accent-purple);
+            color: white;
+        }
+
+        /* Header right section */
+        .header-right {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            float: right;
+        }
+
+        #theme-toggle {
+            background: var(--bg-tertiary);
+            border: none;
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-xl);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        #theme-toggle:hover {
+            background: var(--accent-purple);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive logo sizing */
+        @media (max-width: 1024px) {
+            .logo img {
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                height: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 60px;
+            }
+
+            header {
+                padding: 0.5rem var(--spacing-sm);
+            }
+        }
+
+        /* ===========================
+           HERO SECTION
+           =========================== */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            padding: var(--spacing-lg) var(--spacing-md);
+            z-index: 2;
+        }
+
+        .hero-title {
+            color: white;
+            text-shadow: 0 4px 16px rgba(0,0,0,0.5);
+            margin-bottom: var(--spacing-md);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: rgba(255,255,255,0.9);
+            margin-bottom: var(--spacing-lg);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-formula {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-family: var(--font-header);
+            font-weight: 900;
+            color: white;
+            margin: var(--spacing-md) 0;
+            padding: var(--spacing-md);
+            background: rgba(0,0,0,0.3);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1.2s ease-out 0.4s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.4s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: var(--radius-xl);
+            font-family: var(--font-header);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--accent-blue);
+            border-color: white;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Animated Background Particles */
+        .hero-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        /* ===========================
+           SECTIONS
+           =========================== */
+        section {
+            padding: var(--spacing-xl) var(--spacing-md);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--m1-blue), var(--c1-purple));
+            margin: var(--spacing-sm) auto;
+            border-radius: 2px;
+        }
+
+        /* ===========================
+           ARCHITECTURE VISUALIZATION
+           =========================== */
+        #architecture {
+            background: var(--bg-secondary);
+        }
+
+        .architecture-viz {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .node-card {
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .node-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--m1-blue), var(--c1-purple));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .node-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-purple);
+        }
+
+        .node-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .node-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .node-card.m1 .node-icon { color: var(--m1-blue); }
+        .node-card.w1 .node-icon { color: var(--w1-green); }
+        .node-card.c1 .node-icon { color: var(--c1-purple); }
+
+        .node-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .node-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* ===========================
+           TECHNOLOGY PIPELINE
+           =========================== */
+        #pipeline {
+            background: var(--bg-primary);
+        }
+
+        .pipeline-viz {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .pipeline-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: var(--gradient-card);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-xl);
+            font-family: var(--font-header);
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-purple);
+        }
+
+        .tech-badge.active {
+            background: linear-gradient(135deg, var(--m1-blue), var(--c1-purple));
+            color: white;
+        }
+
+        .tech-badge.future {
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .pipeline-arrow {
+            font-size: 2rem;
+            color: var(--accent-purple);
+        }
+
+        /* ===========================
+           FEATURES GRID
+           =========================== */
+        #features {
+            background: var(--bg-secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .feature-card {
+            background: var(--bg-tertiary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-purple);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-card h4 {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* ===========================
+           PROTOTYPE STATUS
+           =========================== */
+        #prototype {
+            background: var(--bg-primary);
+            text-align: center;
+        }
+
+        .prototype-status {
+            max-width: 800px;
+            margin: var(--spacing-lg) auto;
+            padding: var(--spacing-lg);
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--w1-green), var(--accent-teal));
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(46, 125, 50, 0); }
+        }
+
+        .hardware-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .spec-item {
+            background: rgba(255,255,255,0.05);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+        }
+
+        .spec-label {
+            font-weight: 700;
+            color: var(--accent-purple);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* ===========================
+           CALL TO ACTION
+           =========================== */
+        #cta {
+            background: var(--gradient-hero);
+            text-align: center;
+            color: white;
+        }
+
+        #cta h2, #cta p {
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+
+        /* ===========================
+           FOOTER
+           =========================== */
+        footer {
+            background: var(--bg-secondary);
+            padding: var(--spacing-lg) var(--spacing-md);
+            border-top: 1px solid rgba(108, 111, 173, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .footer-section h4 {
+            color: var(--accent-purple);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-purple);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(108, 111, 173, 0.1);
+            color: var(--text-muted);
+        }
+
+        /* ===========================
+           ANIMATIONS
+           =========================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* ===========================
+           RESPONSIVE DESIGN
+           =========================== */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                order: 3;
+                flex-basis: 100%;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: var(--bg-secondary);
+                padding: var(--spacing-sm);
+                box-shadow: var(--shadow-md);
+                gap: 0;
+                margin-top: var(--spacing-sm);
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: var(--spacing-sm);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-formula {
+                font-size: 1.2rem;
+                padding: var(--spacing-sm);
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .pipeline-row {
+                flex-direction: column;
+            }
+
+            .pipeline-arrow {
+                transform: rotate(90deg);
+            }
+
+            .architecture-viz {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hardware-specs {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section img {
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            #hero {
+                min-height: 80vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+
+            .hero-content {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .node-card, .feature-card {
+                padding: var(--spacing-sm);
+            }
+
+            .tech-badge {
+                font-size: 0.9rem;
+                padding: 0.5rem var(--spacing-sm);
+            }
+
+            #theme-toggle {
+                padding: 0.375rem 0.75rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Improved touch targets for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .btn, .nav-links a, #theme-toggle {
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        /* ===========================
+           UTILITY CLASSES
+           =========================== */
+        .text-center { text-align: center; }
+        .mt-lg { margin-top: var(--spacing-lg); }
+        .mb-lg { margin-bottom: var(--spacing-lg); }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Metaphy%20LLC%20Logo%20No%20BG%204k%20(2).png/:/rs=w:2560,h:698" alt="Metaphy LLC - HCNA">
+        </div>
+
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#pipeline">Tech Pipeline</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#prototype">Prototype</a></li>
+                <li><a href="https://github.com/metaphyllc/hcna" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">HCNA</h1>
+            <p class="hero-subtitle">Hierarchical Composite Node Architecture</p>
+            <p class="hero-subtitle" style="font-size: 1rem; opacity: 0.9; margin-bottom: 0;">
+                <strong>The Physical Embodiment of Multi-Agent Systems</strong>
+            </p>
+            <div class="hero-formula">
+                HCNA-3: 2 Systems + 1 Computer = 3 Entities
+            </div>
+            <p class="hero-subtitle">
+                Revolutionary compositional computing where specialized hardware nodes federate like AI agents. M1 (Moderator) + W1 (Worker) compose into C1 (Composite) — a unified system greater than the sum of its parts.
+            </p>
+            <p class="hero-subtitle" style="font-size: 0.95rem; opacity: 0.85;">
+                <strong>HCNA</strong> = the architecture | <strong>HCNA-3</strong> = first implementation (3 components) | Future: HCNA-4, HCNA-5, HCNA-N...
+            </p>
+            <div class="hero-cta">
+                <a href="https://github.com/metaphyllc/hcna" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="#architecture" class="btn btn-secondary">
+                    <i class="fas fa-rocket"></i> Explore Architecture
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE SECTION -->
+    <section id="architecture">
+        <h2 class="section-title">HCNA-3: The First Implementation</h2>
+        <p class="text-center" style="max-width: 900px; margin: 0 auto var(--spacing-md) auto;">
+            <strong>HCNA-3</strong> demonstrates the core 2S1C principle with <strong>3 total components</strong>. This isn't just distributed computing — it's <strong>compositional computing</strong>, where specialized physical nodes federate hierarchically to instantiate emergent systems.
+        </p>
+        <p class="text-center" style="max-width: 900px; margin: 0 auto var(--spacing-lg) auto; font-size: 0.95rem; opacity: 0.9;">
+            Think of it like <strong>Team Brain for hardware</strong>: Just as FORGE orchestrates the builds, CLIO executes in CLI and they birth Lumina locally — M1 system orchestrates, W1 system executes, and C1 is the birthed corrugated product of the combined systems. One node per role, working together to create something greater.
+        </p>
+
+        <div class="architecture-viz">
+            <div class="node-card m1">
+                <span class="node-icon"><i class="fas fa-brain"></i></span>
+                <div class="node-label">Moderator</div>
+                <h3>M1</h3>
+                <p><strong>Control Plane Supervisor</strong></p>
+                <p>Orchestrates tasks, enforces policies, schedules workloads, monitors health. The strategic brain that decides <em>what</em> to do and <em>when</em>.</p>
+                <p style="margin-top: var(--spacing-sm);"><strong>Color:</strong> <span style="color: var(--m1-blue);">■</span> Blue (#1565C0)</p>
+            </div>
+
+            <div class="node-card w1">
+                <span class="node-icon"><i class="fas fa-cogs"></i></span>
+                <div class="node-label">Worker</div>
+                <h3>W1</h3>
+                <p><strong>Data Plane Executor</strong></p>
+                <p>Executes compute-intensive workloads, processes data, generates results, reports telemetry. The muscle that does the <em>actual work</em>.</p>
+                <p style="margin-top: var(--spacing-sm);"><strong>Color:</strong> <span style="color: var(--w1-green);">■</span> Green (#2E7D32)</p>
+            </div>
+
+            <div class="node-card c1">
+                <span class="node-icon"><i class="fas fa-network-wired"></i></span>
+                <div class="node-label">Composite</div>
+                <h3>C1</h3>
+                <p><strong>Unified External Interface</strong></p>
+                <p>Emergent logical node that clients interact with. C1 <em>is</em> the system M1 and W1 collectively instantiate. Not load balancing — true emergence.</p>
+                <p style="margin-top: var(--spacing-sm);"><strong>Color:</strong> <span style="color: var(--c1-purple);">■</span> Purple (#6A1B9A)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY PIPELINE -->
+    <section id="pipeline">
+        <h2 class="section-title">The Metaphy LLC Technology Pipeline</h2>
+        <p class="text-center" style="max-width: 900px; margin: 0 auto var(--spacing-lg) auto;">
+            HCNA-3 is the <strong>hardware foundation</strong> for the complete Metaphy LLC technology stack, bridging theoretical innovations (QEGG, DRGFC, BPCS) to physical deployments (HMSS) to planetary networks (QUAD).
+        </p>
+
+        <div class="pipeline-viz">
+            <!-- Row 1: Working Technologies -->
+            <div class="pipeline-row">
+                <span class="tech-badge active">QEGG</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="tech-badge active">DRGFC</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="tech-badge active">BPCS</span>
+            </div>
+
+            <!-- Row 2: Current Focus -->
+            <div class="pipeline-row">
+                <span class="tech-badge active" style="font-size: 1.5rem; padding: 1rem 2rem;">
+                    <i class="fas fa-star"></i> HCNA-3 (2S1C) <i class="fas fa-star"></i>
+                </span>
+            </div>
+
+            <!-- Row 3: Future Technologies -->
+            <div class="pipeline-row">
+                <span class="tech-badge future">LWIS</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="tech-badge future">HMSS</span>
+                <span class="pipeline-arrow">→</span>
+                <span class="tech-badge future">QUAD</span>
+            </div>
+        </div>
+
+        <div style="margin-top: var(--spacing-lg); text-align: center;">
+            <p><strong>Legend:</strong></p>
+            <p>
+                <span class="tech-badge active" style="display: inline-block; margin: 0.5rem;">Working</span>
+                <span class="tech-badge future" style="display: inline-block; margin: 0.5rem;">Future</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <h2 class="section-title">Key Features</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-cubes"></i></div>
+                <h4>Composite Emergence</h4>
+                <p>M1 + W1 don't just coordinate — they instantiate C1, a unified system with emergent properties.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                <h4>Plane Separation</h4>
+                <p>Clean boundaries between Control (M1), Data (W1), and Composite (C1) planes.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <h4>Active-Active</h4>
+                <p>M1 and W1 operate simultaneously. Not primary/backup — true parallel operation.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-puzzle-piece"></i></div>
+                <h4>Extensible Roles</h4>
+                <p>Add Storage (S), Accelerators (A), Gateways (G), Observers (O) as needed.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h4>Observability First</h4>
+                <p>Structured logs, metrics, and traces across all node boundaries.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h4>Security Built-In</h4>
+                <p>mTLS everywhere, BPCS encryption, zero-trust architecture.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+                <h4>Hardware Proven</h4>
+                <p>Not theoretical — physical 2-laptop prototype in development.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                <h4>Planetary Scale</h4>
+                <p>Foundation for HMSS (multi-cluster) and QUAD (Type III civilization).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROTOTYPE STATUS -->
+    <section id="prototype">
+        <h2 class="section-title">Prototype Status</h2>
+
+        <div class="prototype-status">
+            <div class="status-badge">
+                <i class="fas fa-rocket"></i> IN DEVELOPMENT
+            </div>
+            <h3>The First HCNA-3 System</h3>
+            <p style="color: var(--text-primary);">
+                Physical proof-of-concept using 2 laptops (Moderator + Worker) demonstrating the 2S1C architecture with real QEGG/DRGFC workloads.
+            </p>
+
+            <div class="hardware-specs">
+                <div class="spec-item">
+                    <span class="spec-label">Hardware</span>
+                    2 Laptops
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Owner</span>
+                    Randell Logan Smith
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Purpose</span>
+                    Proof of Concept
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Workloads</span>
+                    QEGG + DRGFC
+                </div>
+            </div>
+
+            <div style="margin-top: var(--spacing-md);">
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    <strong>Timeline:</strong> Architecture designed (Q1 2026), implementation in progress
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section id="cta">
+        <h2>Build the Future of Computing</h2>
+        <p style="max-width: 700px; margin: 0 auto;">
+            HCNA-3 is open source (MIT). The architecture is yours to build on. Integration with proprietary Metaphy LLC technologies (QEGG, DRGFC, BPCS) available under commercial licensing.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="https://github.com/metaphyllc/hcna" class="btn btn-primary" target="_blank">
+                <i class="fab fa-github"></i> Star on GitHub
+            </a>
+            <a href="https://metaphysicsandcomputing.com" class="btn btn-secondary" target="_blank">
+                <i class="fas fa-globe"></i> Visit Metaphy LLC
+            </a>
+            <a href="mailto:logan@metaphysicsandcomputing.com" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i> Contact for Licensing
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>HCNA</h4>
+                <p>
+					Hierarchical Composite Node Architecture.<br> 
+					2 Systems, 1 Computer, 3 Entities.
+				</p>
+                <p style="margin-top: var(--spacing-sm); color: var(--text-muted);">
+                    <strong>Created by:</strong> Randell Logan Smith<br>
+                    <strong>Company:</strong> Metaphy LLC
+                </p>
+				<img src="https://img1.wsimg.com/isteam/ip/bbaabe63-6ba9-4c65-a2ee-d538211cda2a/Metaphy%20LLC%20Logo%20No%20BG%204k%20(2).png/:/rs=w:2560,h:698" alt="Metaphy LLC" style="height: 30px; margin-bottom: var(--spacing-sm);">
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/metaphyllc/hcna">GitHub Repository</a></li>
+                    <li><a href="https://github.com/metaphyllc/hcna/docs">Documentation</a></li>
+                    <li><a href="https://github.com/metaphyllc/hcna/issues">Report Issues</a></li>
+                    <li><a href="https://github.com/metaphyllc/hcna/blob/main/CONTRIBUTING.md">Contributing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Technologies</h4>
+                <ul class="footer-links">
+                    <li><a href="https://metaphysicsandcomputing.com/qegg">QEGG</a></li>
+                    <li><a href="https://metaphysicsandcomputing.com/drgfc">DRGFC / DRGFC-3D</a></li>
+                    <li><a href="https://metaphysicsandcomputing.com/bpcs">BPCS</a></li>
+                    <li><a href="https://metaphysicsandcomputing.com/quad">QUAD Vision</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="https://metaphysicsandcomputing.com" target="_blank">Website</a></li>
+                    <li><a href="mailto:logan@metaphysicsandcomputing.com">Email</a></li>
+                    <li><a href="https://github.com/DonkRonk17" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://x.com/MetaphyKing" target="_blank"><i class="fab fa-x-twitter"></i> X</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Metaphy LLC. All rights reserved. HCNA-3 architecture licensed under MIT.</p>
+            <p style="margin-top: 0.5rem;">
+                Designed with <i class="fas fa-heart" style="color: var(--c1-purple);"></i> by Team Brain (CLIO, Copilot) for Randell Logan Smith
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ===========================
+        // THEME TOGGLE
+        // ===========================
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check for saved theme preference or default to dark
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            body.classList.add('light-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+
+            if (body.classList.contains('light-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // ===========================
+        // MOBILE MENU TOGGLE
+        // ===========================
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ===========================
+        // ANIMATED BACKGROUND PARTICLES
+        // ===========================
+        const heroBg = document.getElementById('heroBg');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            heroBg.appendChild(particle);
+        }
+
+        // ===========================
+        // SCROLL ANIMATIONS
+        // ===========================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.node-card, .feature-card, .tech-badge').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===========================
+        // HEADER SCROLL EFFECT
+        // ===========================
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.style.padding = '0.5rem 2rem';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+            } else {
+                header.style.padding = '1rem 2rem';
+                header.style.boxShadow = 'none';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // ===========================
+        // SMOOTH SCROLL FOR ANCHOR LINKS
+        // ===========================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

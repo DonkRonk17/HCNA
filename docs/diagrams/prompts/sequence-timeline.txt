@@ -1,0 +1,2 @@
+
+Horizontal sequence diagram: **Client → C1 → M1 → W1 → C1 → Client** with labeled steps (POST /jobs, emit intent, dispatch, running, completed, 200 OK). Use enterprise blue/green/purple palette and monospaced captions.

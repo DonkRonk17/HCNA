@@ -1,0 +1,2 @@
+
+Flat, clean systems diagram with two planes: **Control Plane** (blue) containing **M1 (Moderator)**, and **Data Plane** (green) containing **W1 (Worker)**. A purple **Composite Plane** on top labeled **C1**. Show solid green arrows for data, dashed blue arrows for control. Include a legend and a minimal palette.

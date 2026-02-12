@@ -1,0 +1,8 @@
+
+# HCNA-C1 composite config (example)
+role: composite
+vip_dns: hcna-c1.prod.local
+port: 443
+backends:
+  - hcna-m1.prod.local:8443
+  - hcna-w1.prod.local:9443

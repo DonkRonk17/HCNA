@@ -1,0 +1,3 @@
+{"ts":"2026-02-11T17:05:00Z","node":"M1","metric":"queue_depth","value":3}
+{"ts":"2026-02-11T17:05:01Z","node":"W1","metric":"cpu_util","value":0.72}
+{"ts":"2026-02-11T17:05:02Z","node":"C1","metric":"req_rate","value":18}

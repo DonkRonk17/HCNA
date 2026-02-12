@@ -1,0 +1,2 @@
+
+Isometric technical diagram of a distributed system called **HCNA‑3**. Two physical servers labeled **HCNA‑M1 (Moderator)** in blue and **HCNA‑W1 (Worker)** in green are connected by a teal **Control Bus**. Above them, a purple cloud‑like element labeled **HCNA‑C1 (Composite Node)** exposes a public API (VIP/DNS). Show arrows: M1→W1 (intents), W1→C1 (results), clients→C1 (requests). Clean enterprise style, subtle gradients, legible labels, white background.
